@@ -4,6 +4,7 @@ return {
   dependencies = {
     "rafamadriz/friendly-snippets",
     "xzbdmw/colorful-menu.nvim",
+    "giuxtaposition/blink-cmp-copilot",
   },
 
   opts = {
@@ -13,19 +14,6 @@ return {
     },
     completion = {
       menu = {
-        window = {
-          border = {
-            { "┌", "FloatBorder" },
-            { "─", "FloatBorder" },
-            { "┐", "FloatBorder" },
-            { "│", "FloatBorder" },
-            { "┘", "FloatBorder" },
-            { "─", "FloatBorder" },
-            { "└", "FloatBorder" },
-            { "│", "FloatBorder" },
-          },
-          winhighlight = "Normal:Normal,FloatBorder:FloatBorder",
-        },
         draw = {
           columns = { { "kind_icon" }, { "label", gap = 1 } },
           components = {
@@ -41,16 +29,13 @@ return {
         },
       },
       documentation = {
-        window = {
-          border = "rounded",
-          winhighlight = "Normal:Normal,FloatBorder:FloatBorder",
-        },
         auto_show = false,
       },
     },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
     },
+
     fuzzy = { implementation = "prefer_rust_with_warning" },
   },
   opts_extend = { "sources.default" },

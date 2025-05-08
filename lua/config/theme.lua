@@ -48,7 +48,6 @@ vim.api.nvim_set_hl(0, "Pmenu", {
   ctermbg = 233, -- black background
   ctermfg = 7, -- white/gray text
 })
-
 vim.api.nvim_set_hl(0, "PmenuSel", {
   ctermbg = 236, -- light background for selected item
   ctermfg = 7, -- black text
@@ -58,4 +57,9 @@ vim.api.nvim_set_hl(0, "PmenuSel", {
 vim.api.nvim_set_hl(0, "FloatBorder", {
   ctermfg = 7, -- light gray (white-ish)
   ctermbg = 0, -- black
+})
+
+vim.api.nvim_set_hl(0, "CopilotSuggestion", {
+  ctermfg = 8, -- DarkGray
+  italic = true,
 })
