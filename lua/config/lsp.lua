@@ -14,3 +14,22 @@ vim.lsp.config("*", {
     bufmap("n", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
   end,
 })
+vim.diagnostic.config({
+  virtual_text = false, -- you can set this to true if you want inline text as well
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
+})
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, { focus = false })
+  end,
+})
