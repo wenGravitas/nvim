@@ -7,6 +7,7 @@ return {
     -- enable mason and configure icons
     mason.setup({
       ui = {
+        border = "double",
         icons = {
           package_installed = "✓",
           package_pending = "➜",
