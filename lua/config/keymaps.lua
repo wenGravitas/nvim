@@ -30,3 +30,20 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
 vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Diagnostics" })
+
+vim.api.nvim_create_user_command("EditConfig", function()
+  vim.cmd("cd ~/.config/nvim")
+  require("telescope.builtin").find_files({ cwd = "~/.config/nvim" })
+end, {})
+
+vim.keymap.set("n", "<leader>rr", function()
+  for name, _ in pairs(package.loaded) do
+    if name:match("^user") or name:match("^plugins") then
+      package.loaded[name] = nil
+    end
+  end
+  dofile(vim.fn.stdpath("config") .. "/init.lua")
+  vim.notify("Config reloaded!", vim.log.levels.INFO)
+end, { desc = "Reload Neovim config" })
+
+vim.keymap.set("n", "<leader>ri", "<cmd>EditConfig<CR>", { desc = "Edit Neovim config" })
