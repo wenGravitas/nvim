@@ -2,3 +2,6 @@
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
 
+-- System clipboard
+vim.opt.clipboard:append("unnamedplus")
+
