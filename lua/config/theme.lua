@@ -45,12 +45,17 @@ vim.api.nvim_set_hl(0, "VertSplit", {
 })
 
 vim.api.nvim_set_hl(0, "Pmenu", {
-  ctermbg = 0, -- black background
+  ctermbg = 233, -- black background
   ctermfg = 7, -- white/gray text
 })
 
 vim.api.nvim_set_hl(0, "PmenuSel", {
-  ctermbg = 0, -- light background for selected item
+  ctermbg = 236, -- light background for selected item
   ctermfg = 7, -- black text
   bold = true,
+})
+
+vim.api.nvim_set_hl(0, "FloatBorder", {
+  ctermfg = 7, -- light gray (white-ish)
+  ctermbg = 0, -- black
 })
