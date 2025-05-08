@@ -36,3 +36,5 @@ vim.api.nvim_set_hl(0, "VertSplit", {
   ctermfg = 8, -- dark gray
   ctermbg = 0, -- black background
 })
+
+vim.opt.cmdheight = 1
