@@ -11,6 +11,14 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit" })
 -- Switch to last buffer
 vim.keymap.set("n", "<leader><leader>", "<C-^>", { desc = "Switch to last buffer" })
 
+-- Hide highlight
+vim.keymap.set(
+  "n",
+  "<Leader>H",
+  ":set hlsearch!<CR>",
+  { noremap = true, silent = true, desc = "Toggle search highlight" }
+)
+
 -- which-key
 vim.keymap.set("n", "<leader>?", function()
   require("which-key").show("<leader>")

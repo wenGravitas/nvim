@@ -5,6 +5,7 @@ return {
     "rafamadriz/friendly-snippets",
     "xzbdmw/colorful-menu.nvim",
     "giuxtaposition/blink-cmp-copilot",
+    "Kaiser-Yang/blink-cmp-avante",
   },
 
   opts = {
@@ -33,7 +34,16 @@ return {
       },
     },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer" },
+      default = { "avante", "lsp", "path", "snippets", "buffer" },
+      providers = {
+        avante = {
+          module = "blink-cmp-avante",
+          name = "Avante",
+          opts = {
+            -- options for blink-cmp-avante
+          },
+        },
+      },
     },
 
     fuzzy = { implementation = "prefer_rust_with_warning" },
