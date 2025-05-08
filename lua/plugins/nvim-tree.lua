@@ -18,7 +18,6 @@ return {
         dotfiles = false,
       },
     })
-
     vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file tree" })
   end,
 }
