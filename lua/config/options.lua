@@ -14,3 +14,5 @@ vim.opt.relativenumber = true
 vim.opt.formatoptions:remove({ "o", "r" })
 
 vim.opt.cmdheight = 1
+
+vim.opt.splitright = true
