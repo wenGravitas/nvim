@@ -14,6 +14,7 @@ return {
       nerd_font_variant = "mono",
     },
     completion = {
+      --  list = { selection = "auto_insert" },
       menu = {
         draw = {
           columns = { { "kind_icon" }, { "label", gap = 1 } },

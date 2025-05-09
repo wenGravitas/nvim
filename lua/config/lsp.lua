@@ -1,4 +1,5 @@
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("ts")
 
 vim.lsp.config("*", {
   on_attach = function(client, bufnr)
