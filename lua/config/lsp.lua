@@ -1,5 +1,6 @@
 vim.lsp.enable("lua_ls")
-vim.lsp.enable("ts")
+vim.lsp.enable("tsserver")
+vim.lsp.set_log_level("debug")
 
 vim.lsp.config("*", {
   on_attach = function(client, bufnr)
